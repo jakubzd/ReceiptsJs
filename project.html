@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Project 1</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">    
+    </head>
+    <body>
+        <header><h1>PARAGON 30-03-15/004</h1></header>
+        <main>
+            <table id="paragonTable">
+                <tr>
+                    <th class="lp">LP</th>
+                    <th class="nazwa">NAZWA</th>
+                    <th>ILOŚĆ</th>
+                    <th>CENA</th>
+                    <th>SUMA</th>
+                </tr>
+            
+                <tbody id="tableBody">
+                </tbody>
+                <tr>
+                    <td colspan="4" class="razem">RAZEM</td>
+                    <td class="razem" id="suma">0,00zł</td>
+                 </tr>
+            </table>
+        </main>
+        <div id="wrapper">
+            <form name="newParagonForm">
+                <table>
+                    <thead>
+                        <tr>
+                            <td colspan="2"><h2>Nowa pozycja</h2></td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Nazwa:</td>
+                        <td><input name="name" required/></td>
+                    </tr>
+                    <tr>
+                        <td>Ilość:</td>
+                        <td><input name="quantity" required/></td>
+                    </tr>
+                    <tr>
+                        <td>Cena:</td>
+                        <td><input name="price" required/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Dodaj"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <form name="deleteParagonForm">
+                <table>
+                    <thead>
+                        <tr>
+                            <td colspan="2"><h2>Usuń pozycję</h2></td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Indeks (LP):</td>
+                        <td><input name="deleteIndex" required/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Usuń"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <form name="editParagonForm">
+                <table>
+                    <thead>
+                        <tr>
+                            <td colspan="2"><h2>Edytuj pozycję</h2></td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Indeks (LP):</td>
+                        <td><input name="editIndex" required/></td>
+                    </tr>
+                    <tr>
+                        <td>Nazwa:</td>
+                        <td><input name="name" required/></td>
+                    </tr>
+                    <tr>
+                        <td>Ilość:</td>
+                        <td><input name="quantity" required/></td>
+                    </tr>
+                    <tr>
+                        <td>Cena:</td>
+                        <td><input name="price" required/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Edytuj"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    
+        <script src="project.js"></script>
+    </body>
+</html>
